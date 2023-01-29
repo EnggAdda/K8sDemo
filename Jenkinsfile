@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                bat 'docker build -t k8s-demo .'
+                bat 'docker build -t enggadda/k8s-demo .'
             }
         }
         stage('Docker Push') {
