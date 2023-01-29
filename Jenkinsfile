@@ -16,9 +16,9 @@ pipeline {
         }
         stage('Docker Push') {
             steps {
-                withRegistry([url: 'https://registry.hub.docker.com']) {
+                    bat 'docker login'
                     bat 'docker push k8s-demo'
-                }
+
             }
         }
         stage('Deploy to K8s') {
