@@ -17,7 +17,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                     bat 'docker login'
-                    bat 'docker push k8s-demo'
+                    bat 'docker push enggadda/k8s-demo'
 
             }
         }
